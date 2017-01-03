@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by Nsikak  Thompson on 12/8/2016.
  */
 
-public class movie_item {
+public class playing_now_item {
     private int id;
     private  String movie_title;
     private String poster_path;
@@ -15,12 +15,12 @@ public class movie_item {
     private String backdrop;
     private ArrayList<Integer> genre;
 
-    public movie_item(){
+    public playing_now_item(){
 
     }
 
 
-    public movie_item(int id, String movie_title, String poster_path, String overview,String vote_average,String backdrop,ArrayList<Integer> genre) {
+    public playing_now_item(int id, String movie_title, String poster_path, String overview, String vote_average, String backdrop, ArrayList<Integer> genre) {
         this.id = id;
         this.movie_title = movie_title;
         this.poster_path = poster_path;

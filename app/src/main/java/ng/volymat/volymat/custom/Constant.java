@@ -5,5 +5,4 @@ package ng.volymat.volymat.custom;
  */
 
 public class Constant {
-
 }

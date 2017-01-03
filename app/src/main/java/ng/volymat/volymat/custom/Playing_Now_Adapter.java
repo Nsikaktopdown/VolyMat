@@ -6,7 +6,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -16,11 +15,9 @@ import java.util.Map;
 
 import ng.volymat.volymat.Movie_Details;
 import ng.volymat.volymat.R;
-import ng.volymat.volymat.model.movie_item;
+import ng.volymat.volymat.model.playing_now_item;
 import ng.volymat.volymat.ui.DynamicHeightNetworkImageView;
 import ng.volymat.volymat.ui.ImageLoaderHelper;
-
-import static ng.volymat.volymat.R.string.genre;
 
 
 /**
@@ -29,7 +26,7 @@ import static ng.volymat.volymat.R.string.genre;
 
 public class Playing_Now_Adapter extends RecyclerView.Adapter<Playing_Now_Adapter.MyViewHolder> {
 
-    private List<movie_item> moviesList;
+    private List<playing_now_item> moviesList;
     public static final String IMAGE_BASE_URL = "http://image.tmdb.org/t/p/w300_and_h450_bestv2";
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -46,7 +43,7 @@ public class Playing_Now_Adapter extends RecyclerView.Adapter<Playing_Now_Adapte
     }
 
 
-    public Playing_Now_Adapter(List<movie_item> moviesList) {
+    public Playing_Now_Adapter(List<playing_now_item> moviesList) {
         this.moviesList = moviesList;
     }
 
@@ -62,13 +59,13 @@ public class Playing_Now_Adapter extends RecyclerView.Adapter<Playing_Now_Adapte
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
-        movie_item item = moviesList.get(position);
+        playing_now_item item = moviesList.get(position);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Context con = holder.itemView.getContext();
-                movie_item item = moviesList.get(position);
+                playing_now_item item = moviesList.get(position);
                 Intent intent = new Intent(con, Movie_Details.class);
                 intent.putExtra("backdrop_path",item.getBackdrop());
                 intent.putExtra("movie_title", item.getMovie_title());

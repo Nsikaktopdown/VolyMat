@@ -12,12 +12,9 @@ import java.util.List;
 import java.util.Map;
 
 import ng.volymat.volymat.R;
-import ng.volymat.volymat.model.movie_item;
 import ng.volymat.volymat.model.popular_movie_item;
 import ng.volymat.volymat.ui.DynamicHeightNetworkImageView;
 import ng.volymat.volymat.ui.ImageLoaderHelper;
-
-import static ng.volymat.volymat.R.layout.popular;
 
 /**
  * Created by Nsikak  Thompson on 12/9/2016.

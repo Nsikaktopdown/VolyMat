@@ -29,7 +29,7 @@ import java.util.List;
 
 import ng.volymat.volymat.app.AppController;
 import ng.volymat.volymat.custom.Playing_Now_Adapter;
-import ng.volymat.volymat.model.movie_item;
+import ng.volymat.volymat.model.playing_now_item;
 
 /**
  * Created by Nsikak  Thompson on 12/8/2016.
@@ -37,7 +37,7 @@ import ng.volymat.volymat.model.movie_item;
 
 public class Playing_Now extends Fragment {
     private static final String TAG = Playing_Now.class.getSimpleName();
-    private List<movie_item> movieList = new ArrayList<>();
+    private List<playing_now_item> movieList = new ArrayList<>();
     private RecyclerView recyclerView2;
     private Playing_Now_Adapter mAdapter;
     private static String MOVIE_URL = "https://api.themoviedb.org/3/movie/now_playing?" + Config.API_KEY+ "&language=en-US&page=1";
@@ -154,7 +154,7 @@ public class Playing_Now extends Fragment {
             for (int i = 0; i < feedArray.length(); i++) {
                 JSONObject feedObj = (JSONObject) feedArray.get(i);
 
-               movie_item item = new movie_item();
+               playing_now_item item = new playing_now_item();
                 item.setId(feedObj.getInt("id"));
                 item.setMovie_title(feedObj.getString("title"));
 

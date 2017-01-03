@@ -5,5 +5,5 @@ package ng.volymat.volymat;
  */
 
 public class Config {
-    public static String API_KEY = "api_key=5ecbadc34e688b014eca3b23d34a2723";
+    public static String API_KEY = "YOUR_API_KEY";
 }
